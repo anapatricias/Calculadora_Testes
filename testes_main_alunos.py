@@ -46,11 +46,12 @@ class TestCalculadora(unittest.TestCase):
         # Teste números negativos com exponenciação, testar para todas as versões
         self.assertEqual(calculadora(-2, 3, '^'), -8)
 
-        # Teste números negativos com exponenciação de zero, testar para todas as versões
+        # Teste números negativos com exponenciação de zero, testar para todas  versões
         self.assertEqual(calculadora(0, 3, '^'), 0)
 
 
 if __name__ == '__main__':
     unittest.main()
+
 
 # para correr os testes: python -m unittest -v testes_main_alunos.py
