@@ -65,7 +65,7 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(calculadora_v2(-2, 3, '^'), -8)
         self.assertEqual(calculadora_v2(0, 3, '^'), 0)
         
-         #Teste operações diversas v3
+        #Teste operações diversas v3
          
         self.assertTrue(math.isnan(calculadora_v3(5, 0, '/')))
         self.assertTrue(math.isnan(calculadora_v3(5, 0, '%')))
