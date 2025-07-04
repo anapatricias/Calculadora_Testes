@@ -49,7 +49,7 @@ class TestCalculadora(unittest.TestCase):
         # Teste números negativos com exponenciação de zero, testar para todas  versões
         self.assertEqual(calculadora(0, 3, '^'), 0)
         
-        #Teste operações diversas V2 
+        #Teste operações diversas v2 
         
         self.assertTrue(math.isnan(calculadora_v2(5, 0, '/')))
         self.assertTrue(math.isnan(calculadora_v2(5, 0, '%')))
@@ -65,7 +65,21 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(calculadora_v2(-2, 3, '^'), -8)
         self.assertEqual(calculadora_v2(0, 3, '^'), 0)
         
-
+         #Teste operações diversas v3
+         
+        self.assertTrue(math.isnan(calculadora_v3(5, 0, '/')))
+        self.assertTrue(math.isnan(calculadora_v3(5, 0, '%')))
+        self.assertTrue(math.isnan(calculadora_v3(2, 3, '$')))
+        self.assertTrue(math.isnan(calculadora_v3(2, 5, '#')))
+        self.assertTrue(math.isnan(calculadora_v3(0, 2, 'qwe')))
+        self.assertAlmostEqual(calculadora_v3(2.5, 1.5, '+'), 4.0)
+        self.assertAlmostEqual(calculadora_v3(4.5, 1.5, '-'), 3.0)
+        self.assertAlmostEqual(calculadora_v3(5.5, 1.5, '*'), 8.25)
+        self.assertEqual(calculadora_v3(-2, 3, '*'), -6)
+        self.assertEqual(calculadora_v3(-6, 3, '/'), -2.0)
+        self.assertEqual(calculadora_v3(-7, 3, '%'), 2.0)
+        self.assertEqual(calculadora_v3(-2, 3, '^'), -8)
+        self.assertEqual(calculadora_v3(0, 3, '^'), 0)
 
 if __name__ == '__main__':
     unittest.main()
